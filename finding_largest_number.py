@@ -40,13 +40,13 @@ def main():
     try:
         x_largest = int(input("which largest number would you like to guess"
                 + " (1st, 2nd, 3rd, etc.)? "))
-        if not x_largest >= 1 and x_largest <=10:
+        if x_largest < 1 or x_largest > 10:
             print("please input a real number from 1-10")
+        else:
+            print(x_biggest_number(list_of_numbers, x_largest))
             
     except:
         print("Pleas input an actual number")
-    else:
-        print(x_biggest_number(list_of_numbers, x_largest))
 
 if __name__ == "__main__":
         main()
