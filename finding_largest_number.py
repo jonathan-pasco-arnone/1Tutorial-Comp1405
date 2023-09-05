@@ -16,7 +16,7 @@ def x_biggest_number(array, x_highest):
         current_largest_index = 0
         number = 0
         while number < len(array):
-            if array[number] > current_largest_index:
+            if array[number] > array[current_largest_index]:
                 current_largest_index = number
             number += 1
         sorted_array.append(array[current_largest_index])
